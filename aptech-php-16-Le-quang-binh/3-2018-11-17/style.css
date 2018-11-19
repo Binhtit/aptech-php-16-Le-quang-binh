@@ -1,0 +1,82 @@
+p{
+    font-size: 18px;
+    color: white;
+}
+.p{
+    font-size: 18px;
+    color: white;
+}
+h2{
+    text-align: center;
+    padding-top: 10px;
+}
+i{
+    font-size: 18px;
+    color: white;
+}
+li{
+    font-size: 18px;
+    color: white;
+}
+header{
+    margin: 0 auto;
+}
+.cot-1{
+    height: 1200px;
+    background-color: #444;
+}
+.cot-2{
+    height: 1200px;
+    background-color: aqua;
+}
+
+.cot-1a{
+    background-color: #018d63;
+    height: 250px;
+}
+.Picture{
+    height: 200px;
+    text-align: center;
+    padding-top: 2%;
+    
+}
+.avt{
+    height: 190px;   
+    border: #04a575 solid;
+}
+
+.cot-1b{
+    background: #02b47f;
+    height: 500px;
+    border-top: #04db9b solid 1px;
+}
+.cot-1c{
+    background-color: #02b47f;
+    height: 250px;
+    border-top: #04db9b solid 1px;
+}
+.cot-2a{
+    height: 50px;
+    background-color: white; 
+}
+.fa-briefcase{
+    color: orange;
+    padding-left: 20px;
+} /*  can chinh logo cua text trinh do hoc van */
+.cot-2b{
+    height: 200px;
+    background-color: #02b47f;
+    border-top: #04db9b solid 1px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cot-2c{
+    height: 50px;
+    background-color: white;
+}
+.cot-2d{
+    height: 830px;
+    background-color: #02b47f;
+    border-top: #04db9b solid 1px;
+    padding-left: 20px;
+}
