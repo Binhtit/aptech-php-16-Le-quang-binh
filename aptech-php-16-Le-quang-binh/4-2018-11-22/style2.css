@@ -1,0 +1,26 @@
+a:hover{
+    border-bottom: 5px white solid;
+}
+.bbuttom{
+    height: 55px;
+    width: 170px;
+    border-radius: 15px;
+    border: 3px rgb(95, 92, 92) solid;
+}
+.bbuttom:hover{
+    height: 55px;
+    width: 180px;
+    border-radius: 15px;
+    border: 3px rgb(95, 92, 92) solid;  
+    color: white;
+    background-color: #4e4c4c;
+    transition: all 0.5s 0s;
+    -moz-transition: all 0.5s 0s;
+    -webkit-transition: all 0.5s 0s;
+}
+.bbody{
+    height: 70vh;
+}
+.footer{
+    text-align: center;
+}
