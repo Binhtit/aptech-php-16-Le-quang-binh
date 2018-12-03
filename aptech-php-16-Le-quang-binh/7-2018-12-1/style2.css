@@ -1,0 +1,9 @@
+.nut{
+text-decoration: none;
+}
+.nut:hover{
+    text-decoration: none !important;
+}
+.khung{
+    border-radius: 5px;
+}
