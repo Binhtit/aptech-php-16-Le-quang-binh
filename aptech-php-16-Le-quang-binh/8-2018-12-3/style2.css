@@ -1,0 +1,18 @@
+.Logo{
+    text-decoration: none;
+}
+.logo:hover{
+    text-decoration:none !important;
+}
+
+.nut-menu{
+    opacity: 0.2;
+}
+.div-tuy-chon{
+    height: 300px;
+    
+    margin: 0 auto;
+}
+.nhap-thong-tin{
+    width: 300px;
+}
