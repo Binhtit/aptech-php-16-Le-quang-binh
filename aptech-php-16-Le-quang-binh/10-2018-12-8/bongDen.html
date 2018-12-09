@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   
+</head>
+<body style=" display:flex; justify-content:center ">
+
+    <div style="height:800px; width: 1000px; background-color:rgb(44, 44, 35); display: flex;  justify-content: center; flex-direction: column;">
+        <img id="bulb" src="./bulboff.png" style=" height: 600px;"> 
+
+        <button id="nut" onclick="turnbt()"><img id="anhBat" src="./switchon.png"></button>
+            
+    </div>
+
+
+
+    <script>
+        function turn(){
+            document.getElementById('bulb').src='./bulbon.png';
+            document.getElementById('anhBat').src='./switchoff.png';
+        }
+        function turn2(){
+            document.getElementById('bulb').src='./bulboff.png';
+            document.getElementById('anhBat').src='./switchon.png';
+        }
+
+        function turnbt(){
+          var a =  document.getElementById('bulb').src;
+
+          var b = a.includes('of');
+
+          if (b==true){
+              turn();
+          }
+          else{
+              turn2();
+          }
+        }
+
+                // Nhớ dấu bằng là ==
+                // còn dấu gán là =
+                // var a có thể gán cho 1 câu lệnh. lưu ý từ cuối cùng của câu lệnh chính là thứ cần gán. ở đây là src 
+
+
+    
+    </script>
+    
+</body>
+</html>
