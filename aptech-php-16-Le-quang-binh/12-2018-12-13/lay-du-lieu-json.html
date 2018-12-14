@@ -1,0 +1,51 @@
+.<!DOCTYPE html>
+<html>
+<head>
+    <title>json</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="container bg-secondary">
+        <button id="layDuLieu" class="btn btn-success">Lấy tên</button>
+        <h3 id="inDuLieu"></h3>
+
+        <script>
+        $(document).ready(function(){
+            $('#layDuLieu').click(function(){
+                $.get("data.json", function(data, status){
+        var khoa =Object.keys(data);                    //lấy giá trị keys trong data.json
+        var duLieu ='';
+        // console.log(keys)
+
+        for(var i=0; i<khoa.length; i++){               //nếu i nhỏ hơn chiều dài của khoa(key trong data.json)
+
+            // console.log(khoa[i])
+            
+        for(var j=0; j<data[khoa[i]].length; j++){
+            // console.log(data[khoa[j]])
+            var a =data[khoa[i][j]]
+            document.write(a)
+        // for(var z=0; z<data[khoa[i]][j].length; z++){
+        //     console.log(khoa[z])
+        // }
+            // var a =data[khoa[i][j]].name
+            // document.write(a)
+        }
+        }
+        
+    });
+
+
+            })
+        })
+        
+        $("inDuLieu").html('duLieu');
+        </script>
+    </div>
+
+
+</body>
+</html>
