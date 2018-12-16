@@ -9,31 +9,46 @@
 </head>
 <body>
     <div class="container bg-secondary">
+        <h1>Lấy dữ liệu từ Json</h1>
         <button id="layDuLieu" class="btn btn-success">Lấy tên</button>
-        <h3 id="inDuLieu"></h3>
-
+        <div class="row border-danger">
+            <div class="col-3 p-0"> <h4>ID</h4>     <h5></h5>           </div>
+            <div class="col-3 p-0"> <h4>Tên</h4>    <p id="c2"></p>     </div>
+            <div class="col-3 p-0"> <h4>Email</h4>     <p id="c3"></p>     </div>
+            <div class="col-3 p-0"> <h4>Password</h4>     <p id="c4"></p>     </div>
+    
+        
+        </div>
         <script>
         $(document).ready(function(){
             $('#layDuLieu').click(function(){
                 $.get("data.json", function(data, status){
         var khoa =Object.keys(data);                    //lấy giá trị keys trong data.json
         var duLieu ='';
-        // console.log(keys)
+        var users =khoa.users;
+        // console.log(khoa)
+        //  console.log(data[khoa[1]])
+       
 
-        for(var i=0; i<khoa.length; i++){               //nếu i nhỏ hơn chiều dài của khoa(key trong data.json)
+        for(var i=0; i<data[khoa[1]].length; i++){               //nếu i nhỏ hơn chiều dài của data cua khoa(key trong data.json = users  hiện đang ở vị trí số 1=users[1]) i=i+1 cho tới khi i=length khoa
 
-            // console.log(khoa[i])
+            console.log(data[khoa[1]][i].name)          
+            // document.write(data[khoa[i]])                    // khoa[i] lấy giá trị khóa thứ i
             
-        for(var j=0; j<data[khoa[i]].length; j++){
-            // console.log(data[khoa[j]])
-            var a =data[khoa[i][j]]
-            document.write(a)
-        // for(var z=0; z<data[khoa[i]][j].length; z++){
-        //     console.log(khoa[z])
+        // for(var j=0; j<data[khoa[1]][i].length; j++){
+            // console.log([khoa[1]][i][j])
+            var ten =data[khoa[1]][i].name 
+            var id =data[khoa[1]][i].id
+            var email =data[khoa[1]][i].email
+            var pw =data[khoa[1]][i].password
+            // document.write(name)
+            // $("#inDuLieu").html(name);
+            $('h5').append('<p class="border text-light px-5">'+ id + '</p>');
+            $('#c2').append('<p class="border text-light px-1">'+ ten + '</p>');
+            $('#c3').append('<p class="border text-light px-1">'+ email + '</p>');
+            $('#c4').append('<p class="border text-light px-1">'+ pw + '</p>')
         // }
-            // var a =data[khoa[i][j]].name
-            // document.write(a)
-        }
+
         }
         
     });
@@ -42,10 +57,13 @@
             })
         })
         
-        $("inDuLieu").html('duLieu');
+       
+
+
+        //NOTE:   kiểm tra nhầm lẩn data[khoa[i]][j] -- đúng
+        //                          data[khoa[i][j]] -- sai    
         </script>
     </div>
-
 
 </body>
 </html>
