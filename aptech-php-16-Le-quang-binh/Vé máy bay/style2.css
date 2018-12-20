@@ -1,0 +1,66 @@
+.Logo{
+    text-decoration: none;
+}
+.logo:hover{
+    text-decoration:none !important;
+}
+#maybay{
+    height:35px; 
+    position: absolute; 
+    left:-27%;
+    transition: all 0.7s 0s ease-in-out;
+}
+#maybay:hover{
+    margin-left: 340px;
+    margin-top: 9px;
+}
+
+.nut-menu{
+    opacity: 0.2;
+}
+.div-tuy-chon{
+    
+    
+    margin: 0 auto;
+}
+.nhap-thong-tin{
+    width: 300px;
+}
+.khu-hoi{
+    width: 500px;
+    margin: 0 auto;
+}
+#khu-hoi{
+   flex: 0 !important;
+}
+.ho-tro{
+    height:100px; 
+    width:100px; 
+    position: fixed; 
+    z-index: 999;
+    right: 4%;
+    bottom: 7%;
+}
+
+
+@media only screen and (max-width: 1200px ) {
+    .ulmenu2 {
+        font-size: 14px;
+    }
+    #maybay{
+        left:-31%; 
+    }
+}
+@media only screen and (max-width: 992px ) {
+    .ulmenu2, .header-menu{
+        display: none!important;
+    }
+}
+
+@media only screen and (min-width: 992px ) {
+    .divMenuNho {
+        font-size: 14px;
+        display: none !important;
+    }
+
+}
