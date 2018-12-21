@@ -42,7 +42,28 @@
     bottom: 7%;
 }
 
+.anh-vn{
+    border: 10px solid #F8F9FA;
+}
 
+.Bcard{
+    opacity: 0;
+}
+.Bcard:hover{
+    opacity: 0.8;
+
+}
+li{
+    color: #F3F3F3;
+    list-style: none;
+}
+.footer{
+    font-size: 50px;
+    margin: 20px;
+}
+hr{
+    width: 600px;
+}
 @media only screen and (max-width: 1200px ) {
     .ulmenu2 {
         font-size: 14px;
