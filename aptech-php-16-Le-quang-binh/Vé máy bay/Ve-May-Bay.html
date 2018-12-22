@@ -20,7 +20,8 @@
 </head>
 
 <body class=" bg-light">
-  <div class=" container header-menu" style="position:relative;">
+  <div id="bgAnHien"></div>
+  <div class=" container header-menu">
     <div class=" d-flex align-items-center justify-content-between" style=" height: 60px;">
       <div class="d-flex">
         <img class="mr-2" id="maybay" src="./img/logo.1.png">
@@ -46,12 +47,14 @@
         </ul>
       </div>
     </div>
-    <div class="ho-tro">
+    <div id="hoTro" class="ho-tro d-flex justify-content-around">
+        <button id="btHoTro" class="btn btn-success">Hổ Trợ<br><i class="far fa-comments display-4"></i></button>
+
       <img src="./img/hoTro.PNG" alt="Hổ trợ">
       </div>
 
   </div>
-  <div class="bg-info ">
+  <div class=" bg-info">
     <div class="nav nav-tabs border-bottom-0 container ">
       <ul class="nav-item d-flex ulmenu2">
         <a class="nav-link text-light" href="#">Trang chủ</a>
@@ -154,15 +157,19 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-                  <!-- nút chuyển đổi div -->
-    <ul class="nav nav-tabs" style=" position:absolute; top: 410px; left: 20%;">
-      <li class="nav-item d-flex">
-        <a id="ve" class="nav-link active btn-info" href="#"><i class="far fa-paper-plane pr-3"></i>Vé máy bay</a>
-        <a id="tour" class="nav-link active btn-info" href="#"><i class="fas fa-umbrella-beach pr-3"></i>Đặt tour du
-          lịch</a>
-    </ul>
+    
   </div>
-  <div class=" container bg-white shadow-lg div-tuy-chon p-0 rounded-bottom">
+  <div class=" container p-0"  style="position:relative;">
+
+    <div id="oder" class="bg-white shadow-lg div-tuy-chon p-0 rounded-bottom">        <!-- div menu bán vé -->
+
+                               <!-- nút chuyển đổi div -->
+    <ul class="nav nav-tabs button-menu-an-hien">
+        <li class="nav-item d-flex">
+            <button id="ve" class="nav-link active btn-info" href="#"><i class="far fa-paper-plane pr-3"></i>Vé máy bay</button>
+            <button id="tour" class="nav-link active btn-info" href="#"><i class="fas fa-umbrella-beach pr-3"></i>Đặt tour du
+              lịch</button>
+      </ul>
 
     <div class=" bg-secondary">
       <p class="text-light"><i class="fas fa-piggy-bank text-warning mx-3 py-2" style=" font-size:30px;"></i>Đặt combo
@@ -284,7 +291,7 @@
         </div>
       </div>
     </div>
-
+  </div>
   </div>
   <div class="container-fluid mt-5 bg-white text-center">
     
@@ -460,7 +467,18 @@
         $('#div-ban-ve').addClass('d-none');
         $('#div-ban-ve').removeClass('d-block');
         // $('#div-tour').fadeIn(500)
-      })  
+      }) 
+      $('#btHoTro').click(function(){
+        $('#hoTro').toggleClass('ho-tro2');
+      }) 
+      $('#oder').click(function(){
+        $('#bgAnHien').addClass('bg-an-hien');
+        $('#oder').addClass('div-an-hien');
+      })
+      $('#bgAnHien').click(function(){
+        $('#bgAnHien').removeClass('bg-an-hien');
+        $('#oder').removeClass('div-an-hien');
+      })
     })
   </script>
 

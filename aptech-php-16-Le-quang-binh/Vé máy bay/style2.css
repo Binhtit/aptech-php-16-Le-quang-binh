@@ -1,3 +1,22 @@
+.bg-an-hien{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: dimgray;
+    z-index: 999;
+    opacity: 0.7;
+}
+.div-an-hien{
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+}
+.button-menu-an-hien{
+    position:absolute; 
+    top: -41px; 
+    left: 0%;
+}
+
 .Logo{
     text-decoration: none;
 }
@@ -38,10 +57,17 @@
     width:100px; 
     position: fixed; 
     z-index: 999;
-    right: 4%;
+    right: -93px;
     bottom: 7%;
 }
-
+.ho-tro2{
+    height:100px; 
+    width:100px; 
+    position: fixed; 
+    z-index: 999;
+    right: 85px;
+    bottom: 7%;
+}
 .anh-vn{
     border: 10px solid #F8F9FA;
 }
