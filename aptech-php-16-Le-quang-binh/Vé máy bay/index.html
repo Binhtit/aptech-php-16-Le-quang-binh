@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="./style2.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-
+  <link rel="shortcut icon" type="image/png" href="./img/may bay.png"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -22,7 +22,7 @@
 <body class=" bg-light">
   <div id="bgAnHien"></div>
   <div class=" container header-menu">
-    <div class=" d-flex align-items-center justify-content-between" style=" height: 60px;">
+    <div class=" d-flex align-items-center justify-content-between" style=" height: 60px; position: relative;">
       <div class="d-flex">
         <img class="mr-2" id="maybay" src="./img/logo.1.png">
         <a class=" text-secondary logo" href="#">
@@ -47,9 +47,16 @@
         </ul>
       </div>
     </div>
+                      <!-- messeger -->
     <div id="hoTro" class="ho-tro d-flex justify-content-around">
         <button id="btHoTro" class="btn btn-success">Hổ Trợ<br><i class="far fa-comments display-4"></i></button>
-
+        <!-- <div class="fb-send-to-messenger" 
+        messenger_app_id="<APP_ID>" 
+        page_id="PAGE_ID" 
+        data-ref="<PASS_THROUGH_PARAM>" 
+        color="<blue | white>" 
+        size="<standard | large | xlarge>">
+      </div> -->
       <img src="./img/hoTro.PNG" alt="Hổ trợ">
       </div>
 
@@ -482,6 +489,36 @@
     })
   </script>
 
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 'your-app-id',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+
+  FB.Event.subscribe('send_to_messenger', function(e) {
+    // callback for events triggered by the plugin
+  
+  });
+
+</script>
 </body>
 
 </html>
